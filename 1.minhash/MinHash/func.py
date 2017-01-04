@@ -63,3 +63,7 @@ def stemming_token(text, n=5):
 def jaccard_similarity(set1, set2):
     j_s = float(len(set1.intersection(set2))) / float(len(set1.union(set2)))
     return j_s
+
+def jaccard_similarity_minhash_approx(set1, set2, k):
+    j_s = float(len(set1.intersection(set2))) / float(k)
+    return j_s
